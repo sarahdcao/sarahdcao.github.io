@@ -127,7 +127,7 @@ el.onmousedown = function (e) {
 };
 
 el.onmousemove = function (e) {
-    if (e.x < 550) {
+    if (e.x < 550) { //anything to the right of 550 is color picker + etc
         switch (drawingState) {
             case drawingMode.draw:
                 if (isDrawing) {
