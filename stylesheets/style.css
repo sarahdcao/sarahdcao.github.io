@@ -1,0 +1,195 @@
+html{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+body{
+    padding:50px;
+    font:14px "Lucida Grande",Helvetica,Arial,sans-serif;
+}
+
+a{
+    color:#00B7FF;
+}
+
+.horizontally_align_items{
+    display: flex;
+    width: fit-content;
+    height: auto;
+    background-color: #778899;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+#color_and_size_options{
+    width: 170px;
+    height: 600px;
+    padding: 5px;
+    border-color: #2F4F4F;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: auto;
+}
+
+#drawing_space{
+    background-color: #FFF;
+    color: #000;
+    width: fit-content;
+    border-color: #2F4F4F;
+    border-width: 5px;
+    border-style: solid;
+    cursor: crosshair;
+    margin-right: auto;
+  }
+  
+#brushtype_buttons{
+    width: fit-content;
+    height: 150px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+.brush_button{
+    border-color: #2F4F4F;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    height: 60px;
+    width: 60px;
+  }
+  
+  /*
+                
+                <button class="brush_button" id="b19" onclick="changeBrush(21);">Stars</button>
+                <button class="brush_button" id="b20" onclick="changeBrush(22);">StarsWithRotation</button>
+                <button class="brush_button" id="b21" onclick="changeBrush(23);">RandomizeEverything</button>
+                <button class="brush_button" id="b22" onclick="changeBrush(24);">ColoredPixels</button>
+                <button class="brush_button" id="b23" onclick="changeBrush(25);">Spray</button>
+                <button class="brush_button" id="b24" onclick="changeBrush(26);">TimeBasedSpray</button>
+                <button class="brush_button" id="b25" onclick="changeBrush(27);">TimeBasedSprayWithRoundDistribution</button>
+                <button class="brush_button" id="b26" onclick="changeBrush(28);">RandomizingDots</button>
+  */
+  
+
+  button#b1{
+      background-image: url('img/simplePencil.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b2{
+      background-image: url('img/smoothConnections.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b3{
+      background-image: url('img/smoothConnectionsWithShadows.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b4{
+      background-image: url('img/dryBrush.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b5{
+      background-image: url('img/pointBasedApproach.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b6{
+      background-image: url('img/pointBasedWithShadows.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b7{
+      background-image: url('img/edgeSmoothingWithRadialGradient.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b8{
+      background-image: url('img/bezierCurves.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b9{
+      background-image: url('img/penVariableSegmentWidth.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b10{
+      background-image: url('img/penMultipleStrokes.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b11{
+      background-image: url('img/thickBrush.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b12{
+      background-image: url('img/slicedStrokes.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b13{
+      background-image: url('img/slicedStrokesWithOpacity.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b14{
+      background-image: url('img/multipleLines.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b15{
+      background-image: url('img/multipleLinesWithOpacity.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b16{
+      background-image: url('img/stampLikeBasic.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b17{
+      background-image: url('img/stampLikeTrailEffect.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b18{
+      background-image: url('img/randomRadiusOpacity.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b19{
+      background-image: url('img/stars.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b20{
+      background-image: url('img/starsWithRotation.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b21{
+      background-image: url('img/randomizeEverythingStars.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b22{
+      background-image: url('img/coloredPixels.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b23{
+      background-image: url('img/spray.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b24{
+      background-image: url('img/timeBasedSpray.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b25{
+      background-image: url('img/timeBasedSprayWithRoundDistribution.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b26{
+      background-image: url('img/randomizingDots.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b27{
+      background-image: url('img/Eraser.png');
+      background-repeat: no-repeat;
+  }
+  button#b28{
+      background-image: url('img/Blur.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b29{
+      background-image: url('img/Smudge.PNG');
+      background-repeat: no-repeat;
+  }
+  button#b30{
+      background-image: url('img/Blend.PNG');
+      background-repeat: no-repeat;
+  }
+  

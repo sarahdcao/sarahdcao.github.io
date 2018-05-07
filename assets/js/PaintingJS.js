@@ -6,6 +6,16 @@ var defaultW = 4;
 ctx.shadowBlur = 0;
 ctx.shadowColor = 'rgb(0, 0, 0)';
 
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 100);
+
+ctx.fillStyle = "#FFFFFF";
+
 //time-based brushes
 var clientX, clientY, timeout;
 var density = 20;
@@ -363,4 +373,16 @@ function distanceBetween(point1, point2) {
 
 function angleBetween(point1, point2) {
     return Math.atan2(point2.x - point1.x, point2.y - point1.y);
+}
+
+function drawCircle(x, y) {
+    var length = 15;
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.beginPath();
+
+    
+    ctx.closePath();
+    ctx.stroke();
+    ctx.restore();
 }

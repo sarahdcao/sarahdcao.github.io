@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Web Painting</title>
+        <link rel="stylesheet" href="stylesheets/style.css"/>
+    </head>
+
+    <body>
+        <div id="brushtype_buttons">
+            <!--This is the brush selector-->
+            <button class="brush_button" id="b2" onclick="changeBrush(2);"></button>
+            <button class="brush_button" id="b3" onclick="changeBrush(3);"></button>
+            <button class="brush_button" id="b4" onclick="changeBrush(4);"></button>
+            <button class="brush_button" id="b14" onclick="changeBrush(16);"></button>
+            <button class="brush_button" id="b15" onclick="changeBrush(17);"></button>
+            <button class="brush_button" id="b16" onclick="changeBrush(18);"></button>
+            <button class="brush_button" id="b17" onclick="changeBrush(19);"></button>
+            <button class="brush_button" id="b18" onclick="changeBrush(20);"></button>
+            <button class="brush_button" id="b19" onclick="changeBrush(21);"></button>
+            <button class="brush_button" id="b20" onclick="changeBrush(22);"></button>
+            <button class="brush_button" id="b21" onclick="changeBrush(23);"></button>
+            <button class="brush_button" id="b22" onclick="changeBrush(24);"></button>
+            <button class="brush_button" id="b23" onclick="changeBrush(25);"></button>
+            <button class="brush_button" id="b24" onclick="changeBrush(26);"></button>
+            <button class="brush_button" id="b25" onclick="changeBrush(27);"></button>
+            <button class="brush_button" id="b26" onclick="changeBrush(28);"></button>
+            <button class="brush_button" id="b27" onclick="changeBrush(29);"></button>
+            <button class="brush_button" id="b28" onclick="changeBrush(30);"></button>
+            <button class="brush_button" id="b29" onclick="changeBrush(31);"></button>
+            <button class="brush_button" id="b30" onclick="changeBrush(32);"></button>
+        </div>
+        <div class="horizontally_align_items">
+            <div id="color_and_size_options">
+                <!--this will hold the value associated with different brush types (this setup is probably temporary)-->
+                <input type="number" id="brushSelected" value="1" hidden/>
+                
+                    <canvas id="filterBox" width="50" height="50" hidden></canvas>
+                
+                
+                    <canvas id="imageBox" width="50" height="50" hidden></canvas>
+                
+                <!--these sliders will represent the color selectors-->
+
+                <div style="margin-top: 20px">
+                    <h3>Select a Color</h3>
+                    <label>Red: </label> <output style="margin-right: 20px" id="redOutput">0</output> <br/><br/>0<input id="redSlider" type="range" min="0" max="255" step="1" value="0" onclick="redOutput.value=this.value; changeColor()" onmousemove="redOutput.value=this.value; changeColor()"/>255
+                </div>
+                <div>
+                    <label>Green: </label> <output style="margin-right: 20px" id="greenOutput">0</output> <br/><br/>0<input id="greenSlider" type="range" min="0" max="255" step="1" value="0" onclick="greenOutput.value=this.value; changeColor()" onmousemove="greenOutput.value=this.value; changeColor()"/>255
+                </div>
+                <div>
+                    <label>Blue: </label> <output style="margin-right: 20px" id="blueOutput">0</output> <br/><br/>0<input id="blueSlider" type="range" min="0" max="255" step="1" value="0" onclick="blueOutput.value=this.value; changeColor()" onmousemove="blueOutput.value=this.value; changeColor()"/>255
+                </div>
+                <div style="margin-top: 15px; margin-bottom: 15px">
+                    <label>RGB Hexa value is: </label><label id="RGBLabel">#000000</label>
+                </div>
+                <!--show the color currently represented by the number sliders above-->
+                <div id="ColorBox" style="background-color: #000000; width: fit-content">
+                    <canvas width="100" height="100"></canvas>
+                </div>
+                <!--this is the box for selecting a brush size. Make the min = 1 and the max = 25-->
+                <div style="margin-top: 10px">
+                    <!--use the textbox for getting the brush size.-->
+                    <label> Brush Size: </label>
+                    <input type="number" name="brushSize" id="brushSizeNumberForm" value="1" onblur="updateBrushSize_textBox()"/> 
+                    0<input id="brushSize_slider" type="range" min="1" max="50" step="1" value="1" onclick="updateBrushSize_slider()" onmousemove="updateBrushSize_slider()"/>50
+                </div>
+            </div>
+            
+            <!--==================================================================-->
+            <!--==================================================================-->
+            <!--==================================================================-->
+            
+            <!--this is the canvas -->
+            <!--the first brush i work on will a practice brush -->
+            <!--basically im going to copy the brush as it is coded from the Exploring canvas drawing techniques webpage-->
+            <div id="drawing_space">
+                <canvas id="DrawingSpace" width="800" height="600" onmousemove="draw()"></canvas>
+            </div>
+
+            <!--==================================================================-->
+            <!--==================================================================-->
+            <!--==================================================================-->
+            
+            
+        </div>
+        
+        
+        <script src="javascript/Drawing.js"></script>
+        <script src="javascript/UpdateBrushSize.js"></script>
+        <script src="javascript/ChooseColor.js"></script>
+    </body>
+</html>
